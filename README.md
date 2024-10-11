@@ -1,10 +1,14 @@
-# AWS RDS Database Management Project
+# Severless Application using AWS - RDS Database Management
 
 ## Project Overview
 
 This repository is part of a larger project and focuses exclusively on the **database** management using **AWS RDS (PostgreSQL)**. The database is containerized using **Docker**, and the project is designed to ensure secure, scalable, and efficient database management in the cloud. Key features include **data encryption at rest**, automated **backup and recovery** strategies, and integration with a broader AWS architecture.
 
-The other components of the project—such as **Lambda functions**, **API Gateway**, and **ECR**—will be managed in a separate repository, with the frontend created using **AWS Honeycode**. The overall goal is to test **AWS deployment** and build a **serverless cloud structure**.
+The other components of the project—such as **Lambda functions**, **API Gateway**, and **ECR**—will be managed in a separate repository. For more details on these components, you can find the Lambda functions repository here:
+
+- **[AWS Lambda Functions Repository](https://github.com/Nivix047/aws-serverless-ecom-platform-functions)**
+
+The overall goal is to test **AWS deployment** and build a **serverless cloud structure**.
 
 ## Key Features
 
@@ -29,7 +33,7 @@ This repository contains the following key files:
 
 - AWS RDS instance for PostgreSQL, set up with **data encryption at rest** and **automated backups**.
 - Docker and Docker Compose installed on your local machine.
-- PostgreSQL client (pgAdmin, psql) for testing.
+- API testing tools like **Postman** or **Insomnia** for testing the CRUD operations.
 
 ### Setup Steps
 
@@ -41,7 +45,7 @@ This repository contains the following key files:
 
 2. **Configure Environment Variables**:
 
-   - Create a `.env` file at root.
+   - Create a `.env` file at the root of your project directory with the necessary environment variables.
 
 3. **Run the Application**:
 
@@ -54,7 +58,7 @@ This repository contains the following key files:
    - This will set up a Python container that connects to the RDS instance and initializes the database with the SQL scripts.
 
 4. **Verify Database Setup**:
-   - Use a PostgreSQL client to verify that the `users`, `products`, and `purchases` tables have been created in your RDS instance.
+   - Use a PostgreSQL client or API testing tools like **Postman** or **Insomnia** to verify that the `users`, `products`, and `purchases` tables have been created in your RDS instance.
    - Sample data should also be present in these tables, as defined in `init.sql`.
 
 ## Security and Best Practices
@@ -63,21 +67,16 @@ This repository contains the following key files:
 - **IAM Roles**: Use least-privilege IAM roles to restrict access to the RDS instance.
 - **Backup and Recovery**: Automated backups and point-in-time recovery are enabled to safeguard against data loss.
 
-## Future Enhancements
-
-- **Infrastructure as Code (IAC)**: Future updates will integrate **Terraform** to automate the setup and scaling of the AWS infrastructure.
-- **Separate Repositories**: A separate repository will manage the backend (Lambda functions), containerization (ECR), and API Gateway integration, along with frontend development using AWS Honeycode.
-
----
-
-## Other Repositories
-
-- **Backend and Frontend Integration**: Lambda functions, API Gateway, and ECR will be managed in another repository. This includes frontend development using **AWS Honeycode**.
-
----
-
 ## Technologies Used
 
 - **AWS RDS (PostgreSQL)**: Relational database management.
 - **Docker**: Containerization for local development.
 - **psycopg2**: PostgreSQL adapter for Python to interact with the database.
+
+## Contributing
+
+Feel free to submit issues or pull requests if you find bugs or have suggestions to improve the project.
+
+## Feedback
+
+Always open to feedback and looking forward to connecting with professionals in the tech space!
